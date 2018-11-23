@@ -34,7 +34,7 @@ int main()
 	double exercise_ratio = 1.2;
 	Stonewt energy_assumption = 1.2 * exercise ;
 	wolfe = wolfe - energy_assumption;
-	cout << "After exercise for the past year, the detective weighted " << endl;
+	cout << "After exercise for the past year, the detective weighed " << endl;
 	display(wolfe, 2);
 	return 0;
 }
