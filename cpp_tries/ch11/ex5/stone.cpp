@@ -6,9 +6,9 @@ using std::endl;
 void display(const Stonewt & st, int n);
 int main()
 {
-	Stonewt incognito = 275; // uses constructor to initialize
-	Stonewt wolfe(285.7); //same as Stonewt wolfe = 285.7;
-	Stonewt taft(21, 8);
+	Stonewt incognito = 275; // uses constructor to initialize, state is LBS
+	Stonewt wolfe(285.7); //same as Stonewt wolfe = 285.7; state is LBS
+	Stonewt taft(21, 8); // state is STN
 	
 	cout << "The celebrity weighed ";
 	cout << incognito << endl;
@@ -16,14 +16,20 @@ int main()
 	cout << wolfe << endl;
 	cout << "The President weighed ";
 	cout << taft << endl;
+
+	// Addition of Stonewts which will reset the state to LBS
 	Stonewt gain(1, 1); 
 	incognito = incognito + gain;
+        cout << "After two weeks, the celebrity weighed ";
+        cout << incognito << endl;
+
+	// Addition of Stonewt and double which will not change the original state
 	double dinner = 5.0;
 	taft = dinner + taft;
-	cout << "After two weeks, the celebrity weighed ";
-	cout << incognito << endl;
 	cout << "After dinner, the President weighed ";
 	cout << taft << endl;
+
+	// Substraction and multiplication
 	Stonewt exercise(6, 3);
 	double exercise_ratio = 1.2;
 	Stonewt energy_assumption = 1.2 * exercise ;
